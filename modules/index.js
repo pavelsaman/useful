@@ -8,3 +8,6 @@ export { default as sortDesc } from './sortDesc.js';
 export { default as sortAsc } from './sortAsc.js';
 export { default as max } from './max.js';
 export { default as min } from './min.js';
+export { default as request } from './networkRequest.js';
+export { default as formatString } from './formatString.js';
+export { default as containsOnly } from './containsOnly.js';

@@ -8,7 +8,8 @@
         "lint": "./node_modules/.bin/eslint \"**/**/*.js\"",
         "test": "npm run lint && mocha -i --grep @retired",
         "l": "npm run lint",
-        "t": "npm run test"
+        "t": "npm run test",
+        "test-only": "mocha -i --grep @retired"
     },
     "keywords": [
         "helpers",
@@ -22,5 +23,8 @@
         "chai": "^4.2.0",
         "eslint": "^7.14.0",
         "mocha": "^8.2.1"
+    },
+    "dependencies": {
+        "axios": "^0.21.0"
     }
 }
