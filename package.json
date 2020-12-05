@@ -9,7 +9,8 @@
         "test": "npm run lint && mocha -i --grep @retired",
         "l": "npm run lint",
         "t": "npm run test",
-        "test-only": "mocha -i --grep @retired"
+        "test-only": "mocha -i --grep @retired",
+        "lint-fix": "./node_modules/.bin/eslint --cache --fix \"**/**/*.js\""
     },
     "keywords": [
         "helpers",
