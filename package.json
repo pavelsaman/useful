@@ -1,0 +1,26 @@
+{
+    "name": "useful",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "lint": "./node_modules/.bin/eslint \"**/**/*.js\"",
+        "test": "npm run lint && mocha -i --grep @retired",
+        "l": "npm run lint",
+        "t": "npm run test"
+    },
+    "keywords": [
+        "helpers",
+        "function",
+        "test",
+        "e2e"
+    ],
+    "author": "Pavel Saman",
+    "license": "MIT",
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "eslint": "^7.14.0",
+        "mocha": "^8.2.1"
+    }
+}
