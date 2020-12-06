@@ -16,28 +16,77 @@ Readonly my $DEFAULT_ENTRY  => q{.};
 Readonly my $CURRENT_FOLDER => q{.};
 Readonly my $UP_FOLDER      => q{..};
 
+sub TRUE  { return 1; };
+sub FALSE { return 0; };
+
+sub is_js_file {
+    my $file_name = shift;
+
+    if ($file_name =~ /[.]js$/xms) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+sub is_not_folder {
+    my $file_name = shift;
+
+    if (not -d $file_name) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+sub is_comment_line {
+    my $line_string = shift;
+
+    if ($line_string =~ /^([\/][*]{2}|[ ][*])/xms) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+sub has_no_comments {
+    my $comments_ref = shift or return;
+
+    if (scalar @{ $comments_ref } == 0) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+sub has_comments {
+    my $comments_ref = shift;
+
+    return not has_no_comments $comments_ref;
+}
+
 sub find_js_files {
     my @queue = @_;
     my @files = ();
 
     LEVEL:
     while (@queue) {
-        my $thing = shift @queue;
+        my $file_name = shift @queue;
 
-        if (not -d $thing) {
-            # get all *.js files
-            if ($thing =~ /[.]js$/xms) {
-                push @files, $thing;
+        if (is_not_folder $file_name) {
+
+            if (is_js_file $file_name) {
+                push @files, $file_name;
             }
 
             next LEVEL;
         }
-        opendir my $dh, $thing or next LEVEL;
+        opendir my $dh, $file_name or next LEVEL;
 
         FOLDER:
         while (my $sub = readdir $dh) {
             next FOLDER if $sub eq $CURRENT_FOLDER or $sub eq $UP_FOLDER;
-            push @queue, "$thing/$sub";
+            push @queue, "$file_name/$sub";
         }
 
         closedir $dh;
@@ -57,36 +106,62 @@ sub get_function_name {
     return $file_name_parts[0];
 }
 
+sub process_file_lines {
+    my $file_name          = shift;
+    my @extracted_comments = ();
+
+    sysopen my $source_file, $file_name, O_RDONLY or return;
+
+    while (my $line = <$source_file>) {
+        if (is_comment_line $line) {
+            push @extracted_comments, $line;
+        }
+    }
+
+    close $source_file;
+    return \@extracted_comments;
+}
+
 sub extract_comments {
-    my @files = @_;
+    my @files              = @_;
     my $extracted_comments = {};
 
-    FILE:
     while (@files) {
-        my $full_file_name = shift @files;
+        my $file_name = shift @files;
+        my $function_name = get_function_name $file_name;
 
-        # read a file line by line
-        sysopen my $source_file, $full_file_name, O_RDONLY
-            or croak 'Cannot create file.';
-
-        my $function_name = get_function_name $full_file_name;
-
-        $extracted_comments->{$function_name} = [];
-        LINE:
-        while (my $line = <$source_file>) {
-            # get comments
-            if ($line =~ /^([\/][*]{2}|[ ][*])/xms) {
-                push @{$extracted_comments->{$function_name}}, $line;
-            }
+        my $comments_ref = process_file_lines $file_name;
+        if (has_comments $comments_ref) {
+            $extracted_comments->{$function_name} = $comments_ref;
         }
-
-        close $source_file;
     }
 
     return $extracted_comments;
 }
 
-sub insert_comments {
+sub include_heading {
+    my $filehandle    = shift;
+    my $function_name = shift;
+
+    printf {$filehandle} "%s %s%s\n\n", $HEADING, $function_name, '()';
+    return;
+}
+
+sub include_comments {
+    my $filehandle   = shift;
+    my $comments_ref = shift;
+
+    printf {$filehandle} "%s%s\n", '```', $LANGUAGE;
+
+    foreach my $line (@{ $comments_ref }) {
+        printf {$filehandle} '%s', $line;
+    }
+
+    printf {$filehandle} "%s\n\n", '```';
+    return;
+}
+
+sub process_comments {
     my $extracted_comments_ref = shift;
 
     unlink $INTO_FILE;
@@ -94,18 +169,10 @@ sub insert_comments {
 
     FUNCTION:
     foreach my $function (sort keys %{ $extracted_comments_ref }) {
-        # skip files with no comments
-        next FUNCTION if scalar @{ $extracted_comments_ref->{$function} } == 0;
+        next FUNCTION if has_no_comments $extracted_comments_ref->{$function};
 
-        # write function name
-        printf {$result_file} "%s %s%s\n\n", $HEADING, $function, '()';
-
-        # write comments
-        printf {$result_file} "%s%s\n", '```', $LANGUAGE;
-        foreach my $line (@{ $extracted_comments_ref->{$function} }) {
-            printf {$result_file} '%s', $line;
-        }
-        printf {$result_file} "%s\n\n", '```';
+        include_heading $result_file, $function;
+        include_comments $result_file, $extracted_comments_ref->{$function};
     }
 
     close $result_file;
@@ -127,7 +194,14 @@ sub get_entry_folder {
 
 ###############################################################################
 
-my $entry = get_entry_folder;
-my @js_source_files = find_js_files $entry;
-my $extracted_comments = extract_comments @js_source_files;
-insert_comments $extracted_comments;
+sub run {
+    my $entry = get_entry_folder;
+    my @js_source_files = find_js_files $entry;
+    my $extracted_comments = extract_comments @js_source_files;
+    process_comments $extracted_comments;
+
+    return;
+}
+
+run;
+exit 0;
