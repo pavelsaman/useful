@@ -35,7 +35,6 @@
 ### isEqual()
 
 ```javascript
-/* eslint-disable eqeqeq */
 /**
  * Return true if given arrays are equal, e.i. have the same members in the
  * same order.
@@ -111,7 +110,6 @@
 ### randInt()
 
 ```javascript
-/* eslint-disable no-magic-numbers */
 /**
  * Return a random integer between min and max inclusive.
  * 
