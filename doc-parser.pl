@@ -62,7 +62,7 @@ sub has_no_comments {
 sub has_comments {
     my $comments_ref = shift;
 
-    return not has_no_comments $comments_ref;
+    return not has_no_comments($comments_ref);
 }
 
 sub find_js_files {
@@ -73,9 +73,9 @@ sub find_js_files {
     while (@queue) {
         my $file_name = shift @queue;
 
-        if (is_not_folder $file_name) {
+        if (is_not_folder($file_name)) {
 
-            if (is_js_file $file_name) {
+            if (is_js_file($file_name)) {
                 push @files, $file_name;
             }
 
@@ -113,7 +113,7 @@ sub process_file_lines {
     sysopen my $source_file, $file_name, O_RDONLY or return;
 
     while (my $line = <$source_file>) {
-        if (is_comment_line $line) {
+        if (is_comment_line($line)) {
             push @extracted_comments, $line;
         }
     }
@@ -128,10 +128,10 @@ sub extract_comments {
 
     while (@files) {
         my $file_name = shift @files;
-        my $function_name = get_function_name $file_name;
+        my $function_name = get_function_name($file_name);
 
-        my $comments_ref = process_file_lines $file_name;
-        if (has_comments $comments_ref) {
+        my $comments_ref = process_file_lines($file_name);
+        if (has_comments($comments_ref)) {
             $extracted_comments->{$function_name} = $comments_ref;
         }
     }
@@ -169,10 +169,10 @@ sub process_comments {
 
     FUNCTION:
     foreach my $function (sort keys %{ $extracted_comments_ref }) {
-        next FUNCTION if has_no_comments $extracted_comments_ref->{$function};
+        next FUNCTION if has_no_comments($extracted_comments_ref->{$function});
 
-        include_heading $result_file, $function;
-        include_comments $result_file, $extracted_comments_ref->{$function};
+        include_heading($result_file, $function);
+        include_comments($result_file, $extracted_comments_ref->{$function});
     }
 
     close $result_file;
@@ -195,13 +195,13 @@ sub get_entry_folder {
 ###############################################################################
 
 sub run {
-    my $entry = get_entry_folder;
-    my @js_source_files = find_js_files $entry;
-    my $extracted_comments = extract_comments @js_source_files;
-    process_comments $extracted_comments;
+    my $entry = get_entry_folder();
+    my @js_source_files = find_js_files($entry);
+    my $extracted_comments = extract_comments(@js_source_files);
+    process_comments($extracted_comments);
 
     return;
 }
 
-run;
+run();
 exit 0;
