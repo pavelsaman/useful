@@ -19,6 +19,16 @@
  */
 ```
 
+### formatDay()
+
+```javascript
+/**
+ * Return day formatted as DD.
+ * 
+ * @param  {object} day Date object.
+ */
+```
+
 ### formatMonth()
 
 ```javascript
