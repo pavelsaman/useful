@@ -14,3 +14,6 @@ export { default as containsOnly } from './containsOnly.js';
 export { default as randomString } from './randomString.js';
 export { default as randomNumberString } from './randomNumberString.js';
 export { default as randomEmail } from './randomEmail.js';
+export { default as yyyyMmDd } from './yyyyMmDd.js';
+export { default as pastYyyyMmDd } from './pastYyyyMmDd.js';
+export { default as formatMonth } from './formatMonth.js';

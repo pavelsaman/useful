@@ -19,6 +19,16 @@
  */
 ```
 
+### formatMonth()
+
+```javascript
+/**
+ * Return MM indexed from 1 as string.
+ * 
+ * @param  {object} month Date object.
+ */
+```
+
 ### formatString()
 
 ```javascript
@@ -107,6 +117,17 @@
  */
 ```
 
+### pastYyyyMmDd()
+
+```javascript
+/**
+ * Return past date in YYYY{{separator}}MM{{separator}}DD.
+ * 
+ * @param  {string} separator Default '/'.
+ * @param  {number} daysAgo Default 1.
+ */
+```
+
 ### randInt()
 
 ```javascript
@@ -176,6 +197,16 @@
  * Sorting does not happen in place. Numeric sorting is performed.
  * 
  * @param  {object} arr
+ */
+```
+
+### yyyyMmDd()
+
+```javascript
+/**
+ * Return current date in YYYY{{separator}}MM{{separator}}DD.
+ * 
+ * @param  {string} separator Default '/'.
  */
 ```
 
