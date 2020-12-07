@@ -16,7 +16,7 @@ suite('first()', function () {
     });
 
     test('non-empty array, one element', function () {
-        expect(useful.first([1])).to.equal(2);
+        expect(useful.first([1])).to.equal(1);
     });
 
     test('non-empty array, more elements', function () {
