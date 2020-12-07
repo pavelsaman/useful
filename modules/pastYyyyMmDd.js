@@ -1,7 +1,7 @@
 'use strict';
 import _isNotString from './_isNotString.js';
 import _getYyyyMmDd from './_getYyyyMmDd.js';
-import _formatDay from './_formatDay.js';
+import formatDay from './formatDay.js';
 import formatMonth from './formatMonth.js';
 
 const DEFAULT_SEPARATOR = '/';
@@ -25,5 +25,5 @@ export default function pastYyyyMmDd (separator, daysAgo) {
 
     const now = _getYyyyMmDd(DAY_IN_MS * numberOfDays);
     return now.getFullYear().toString() + sep + formatMonth(now) + sep
-        + _formatDay(now);
+        + formatDay(now);
 }
