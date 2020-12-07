@@ -118,6 +118,43 @@
  */
 ```
 
+### randomEmail()
+
+```javascript
+/**
+ * Generate random email. If len is 0, the part before '@' will be
+ * missing. If domainStr is '', no domain will be included.
+ * 
+ * @param  {number} len Default 10.
+ * @param  {string} domainStr Default USEFUL_DEFAULT_DOMAIN env variable
+ *  or "inveo.cz".
+ */
+```
+
+### randomNumberString()
+
+```javascript
+/**
+ * Generate random number string. If alphabetString is not passed,
+ * only [0-9] is a considered alphabet.
+ * 
+ * @param  {number} len Default 10.
+ * @param  {string} alphabetString Default [0-9].
+ */
+```
+
+### randomString()
+
+```javascript
+/**
+ * Generate random string. If alphabetString is not passed,
+ * only [a-zA-Z] is a considered alphabet.
+ * 
+ * @param  {number} len Default 10.
+ * @param  {string} alphabetString Default [a-zA-Z].
+ */
+```
+
 ### sortAsc()
 
 ```javascript

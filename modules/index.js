@@ -11,3 +11,6 @@ export { default as min } from './min.js';
 export { default as request } from './networkRequest.js';
 export { default as formatString } from './formatString.js';
 export { default as containsOnly } from './containsOnly.js';
+export { default as randomString } from './randomString.js';
+export { default as randomNumberString } from './randomNumberString.js';
+export { default as randomEmail } from './randomEmail.js';
