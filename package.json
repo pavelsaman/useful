@@ -1,5 +1,5 @@
 {
-    "name": "useful",
+    "name": "useful-library",
     "version": "1.0.0",
     "description": "A set of functions that are useful as helpers for my e2e testing.",
     "main": "index.js",
@@ -30,7 +30,7 @@
     "homepage": "https://github.com/pavelsaman/useful",
     "devDependencies": {
         "chai": "^4.2.0",
-        "eslint": "^7.14.0",
+        "eslint": "^7.15.0",
         "mocha": "^8.2.1"
     },
     "dependencies": {
