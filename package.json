@@ -1,6 +1,6 @@
 {
     "name": "useful-library",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A set of functions that are useful as helpers for my e2e testing.",
     "main": "index.js",
     "type": "module",
