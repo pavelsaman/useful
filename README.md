@@ -85,6 +85,16 @@
  */
 ```
 
+### loadJsonFile()
+
+```javascript
+/**
+ * Reads and parses a json file.
+ * 
+ * @param  {string} filename
+ */
+```
+
 ### max()
 
 ```javascript

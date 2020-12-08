@@ -18,3 +18,4 @@ export { default as yyyyMmDd } from './yyyyMmDd.js';
 export { default as pastYyyyMmDd } from './pastYyyyMmDd.js';
 export { default as formatMonth } from './formatMonth.js';
 export { default as formatDay } from './formatDay.js';
+export { default as loadJsonFile } from './loadJsonFile.js';
