@@ -4,6 +4,7 @@ import axios from 'axios';
  * Request a resource with axios.
  * 
  * @param  {object} reqObj Config object
+ * @return {Promise} Promise object with response.
  */
 export default function request (reqObj) {
     try {
