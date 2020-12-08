@@ -12,7 +12,7 @@ const expect = chai.expect;
 suite('first()', function () {
 
     test('empty array', function () {
-        expect(useful.first([])).to.equal(undefined);
+        expect(useful.first([])).to.equal(null);
     });
 
     test('non-empty array, one element', function () {
