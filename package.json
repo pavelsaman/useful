@@ -6,10 +6,8 @@
     "type": "module",
     "scripts": {
         "lint": "./node_modules/.bin/eslint --cache \"**/**/*.js\"",
-        "test": "npm run lint && mocha -i --grep @retired",
-        "l": "npm run lint",
-        "t": "npm run test",
-        "test-only": "mocha -i --grep @retired",
+        "test-only": "./node_modules/.bin/mocha -i --grep @retired",
+        "test": "npm run lint && npm run test-only",
         "lint-fix": "./node_modules/.bin/eslint --cache --fix \"**/**/*.js\"",
         "doc": "./doc-parser.pl -f ./modules"
     },
