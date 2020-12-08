@@ -26,9 +26,8 @@ jobs:
       - run: npm test      
   release:
     name: Release to npm
-    runs-on: ubuntu-latest
-    if: ${{ github.ref == 'master' }}
     needs: build
+    runs-on: ubuntu-latest
     steps:
       - run: npm publish
         env:
