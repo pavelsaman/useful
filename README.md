@@ -89,9 +89,21 @@
 
 ```javascript
 /**
- * Reads and parses a json file.
+ * Synchronously reads and parses a JSON file.
  * 
  * @param  {string} filename
+ * @return {object} Parsed JSON file as an object literal.
+ */
+```
+
+### loadYamlFile()
+
+```javascript
+/**
+ * Synchronously reads and parses a YAML file.
+ * 
+ * @param  {string} filename
+ * @return {object} Parsed YAML file as an object literal.
  */
 ```
 

@@ -9,13 +9,14 @@ const expect = chai.expect;
    no-empty-function,
    no-magic-numbers
 */
-suite('loadJsonFile()', function () {
+suite('loadYamlFile()', function () {
 
-    test('load package.json', function () {
-        expect(useful.loadJsonFile('package.json')).not.to.equal(undefined);
+    test('return object literal', function () {
+        expect(typeof useful.loadYamlFile('./tests/static/test.yml'))
+            .to.equal('object');
     });
 
-    test('deeply equal', function () {
+    test('deepply equal', function () {
         const expectedResult = {
             people: [
                 {
@@ -29,15 +30,23 @@ suite('loadJsonFile()', function () {
             ]
         };
 
-        expect(useful.loadJsonFile('./tests/static/test.json'))
+        expect(useful.loadYamlFile('./tests/static/test.yml'))
             .to.deep.equal(expectedResult);
     });
 
     test('file undefined', function () {
-        expect(useful.loadJsonFile(undefined)).to.equal(undefined);
+        expect(useful.loadYamlFile(undefined)).to.equal(undefined);
     });
 
     test('file null', function () {
-        expect(useful.loadJsonFile(null)).to.equal(undefined);
+        expect(useful.loadYamlFile(null)).to.equal(undefined);
+    });
+
+    test('file primitive', function () {
+        expect(useful.loadYamlFile(1)).to.equal(undefined);
+    });
+
+    test('file object', function () {
+        expect(useful.loadYamlFile({})).to.equal(undefined);
     });
 });
