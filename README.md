@@ -52,6 +52,47 @@
  */
 ```
 
+### getConnectionString()
+
+```javascript
+/**
+ * Return connection string for MSSQL DB.
+ * 
+ * @param  {object} infoObj Object with user, password, server, and database
+ *  properties.
+ */
+```
+
+### getEnv()
+
+```javascript
+/**
+ * Return value from an env variable.
+ * 
+ * @param  {string} envVarName Env variable name.
+ */
+```
+
+### getEnvWithoutLang()
+
+```javascript
+/**
+ * Return environment part of a string ('dev-cz' => 'dev').
+ * 
+ * @param  {string} envVarName Env variable name.
+ */
+```
+
+### getLang()
+
+```javascript
+/**
+ * Return language part of a string ('dev-cz' => 'cz').
+ * 
+ * @param  {string} envVarName Env variable name.
+ */
+```
+
 ### isEqual()
 
 ```javascript

@@ -9,6 +9,8 @@ const ENCODING = 'utf8';
  * @return {object} Parsed JSON file as an object literal.
  */
 export default function loadJsonFile (filename) {
+    if (filename === undefined || filename === null)
+        return undefined;
     if (typeof filename !== 'string')
         return undefined;
     return JSON.parse(fs.readFileSync(filename, ENCODING));
