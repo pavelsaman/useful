@@ -11,5 +11,5 @@ export default function max (arr) {
         return undefined;
     if (arr.length === 0)
         return undefined;
-    return Math.max.apply(null, arr);
+    return Math.max(...arr);
 }

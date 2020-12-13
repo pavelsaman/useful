@@ -11,5 +11,5 @@ export default function min (arr) {
         return undefined;
     if (arr.length === 0)
         return undefined;
-    return Math.min.apply(null, arr);
+    return Math.min(...arr);
 }
