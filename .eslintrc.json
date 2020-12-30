@@ -249,6 +249,7 @@
         "new-parens": ["error", "always"],
         "newline-per-chained-call": ["warn", { "ignoreChainWithDepth": 4 }],
         "no-new-object": "error",
+        "no-array-constructor": "error",
         "no-unneeded-ternary": "warn",
         "one-var-declaration-per-line": ["error", "initializations"],
         "operator-linebreak": ["warn", "before"],
