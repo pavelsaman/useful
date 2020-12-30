@@ -1,6 +1,5 @@
 'use strict';
 
-export default function getDate (offsetInMs = 0) {
-    const date = new Date(Date.now() - offsetInMs);
-    return date;
+export default function _getYyyyMmDd (offsetInMs = 0) {
+    return new Date(Date.now() - offsetInMs);
 }

@@ -1,7 +1,5 @@
 'use strict';
 
-export default function isArray (obj) {
-    if (!Array.isArray(obj))
-        return false;
-    return true;
+export default function _isArray (obj) {
+    return Array.isArray(obj);
 }

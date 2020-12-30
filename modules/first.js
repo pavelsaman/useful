@@ -1,6 +1,6 @@
 'use strict';
 import nth from './nth.js';
-import isNotArray from "./_isNotArray.js";
+import _isNotArray from "./_isNotArray.js";
 
 /**
  * Return the first element of an array.
@@ -8,7 +8,7 @@ import isNotArray from "./_isNotArray.js";
  * @param  {object} arr
  */
 export default function first (arr) {
-    if (isNotArray(arr))
+    if (_isNotArray(arr))
         return undefined;
     if (arr.length === 0)
         return undefined;

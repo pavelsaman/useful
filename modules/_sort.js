@@ -1,8 +1,8 @@
 'use strict';
-import isNotArray from "./_isNotArray.js";
+import _isNotArray from "./_isNotArray.js";
 
-export default function sort (arr, func) {
-    if (isNotArray(arr))
+export default function _sort (arr, func) {
+    if (_isNotArray(arr))
         return undefined;
     const arrClone = arr.slice();
     arrClone.sort(func);

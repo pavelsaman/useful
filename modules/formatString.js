@@ -1,5 +1,5 @@
 'use strict';
-import isNotArray from './_isNotArray.js';
+import _isNotArray from './_isNotArray.js';
 import containsOnly from './containsOnly.js';
 
 const EMPTY = '';
@@ -14,7 +14,7 @@ function isValidConfig (configObj) {
         return false;
     if (typeof configObj.string !== 'string')
         return false;
-    if (isNotArray(configObj.positions))
+    if (_isNotArray(configObj.positions))
         return false;
     if (!containsOnly(configObj.positions, el => typeof el === 'number'))
         return false;

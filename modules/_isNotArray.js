@@ -1,6 +1,6 @@
 'use strict';
-import isArray from './_isArray.js';
+import _isArray from './_isArray.js';
 
-export default function isNotArray (obj) {
-    return !isArray(obj);
+export default function _isNotArray (obj) {
+    return !_isArray(obj);
 }

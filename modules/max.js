@@ -1,5 +1,5 @@
 'use strict';
-import isNotArray from './_isNotArray.js';
+import _isNotArray from './_isNotArray.js';
 
 /**
  * Return maximum value from an array.
@@ -7,7 +7,7 @@ import isNotArray from './_isNotArray.js';
  * @param  {object} arr
  */
 export default function max (arr) {
-    if (isNotArray(arr))
+    if (_isNotArray(arr))
         return undefined;
     if (arr.length === 0)
         return undefined;

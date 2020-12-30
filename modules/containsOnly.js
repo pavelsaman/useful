@@ -1,5 +1,5 @@
 'use strict';
-import isNotArray from './_isNotArray.js';
+import _isNotArray from './_isNotArray.js';
 
 /**
  * Return true if an array contains only certain elements.
@@ -8,7 +8,7 @@ import isNotArray from './_isNotArray.js';
  * @param  {function} func A function that performs the check
  */
 export default function containsOnly (arr, func) {
-    if (isNotArray(arr))
+    if (_isNotArray(arr))
         return undefined;
     if (typeof func !== 'function')
         return undefined;

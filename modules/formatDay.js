@@ -1,6 +1,7 @@
 'use strict';
+import _isOneDigit from './_isOneDigit.js';
+import _padDate from './_padDate.js';
 
-/* eslint-disable no-magic-numbers */
 /**
  * Return day formatted as DD.
  * 
@@ -9,5 +10,6 @@
 export default function formatDay (day) {
     if (!(day instanceof Date))
         return undefined;
-    return day.getDate() < 10 ? '0' + day.getDate() : day.getDate().toString();
+    return _isOneDigit(day.getDate()) ? _padDate(day.getDate())
+        : day.getDate().toString();
 }

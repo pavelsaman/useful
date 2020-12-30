@@ -1,5 +1,5 @@
 'use strict';
-import isNotArray from "./_isNotArray.js";
+import _isNotArray from "./_isNotArray.js";
 
 /**
  * Return nth element of an array.
@@ -9,7 +9,7 @@ import isNotArray from "./_isNotArray.js";
  * @param  {number} indexStyle Indexing, either start with 0 or 1. Default to 0.
  */
 export default function nth (arr, nth = 0, indexStyle = 0) {
-    if (isNotArray(arr))
+    if (_isNotArray(arr))
         return undefined;
     if (indexStyle !== 0 && indexStyle !== 1)
         return undefined;
