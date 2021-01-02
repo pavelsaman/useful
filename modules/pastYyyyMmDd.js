@@ -20,7 +20,7 @@ export default function pastYyyyMmDd (separator, daysAgo) {
 
     if (_isNotString(separator))
         sep = DEFAULT_SEPARATOR;
-    if (typeof daysAgo !== 'number' || !isFinite(daysAgo))
+    if (typeof daysAgo !== 'number' || !Number.isFinite(daysAgo))
         numberOfDays = 1;
 
     const now = _getYyyyMmDd(DAY_IN_MS * numberOfDays);

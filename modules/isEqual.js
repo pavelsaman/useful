@@ -10,7 +10,7 @@ import _isEqual from './_isEqual.js';
  * @param  {object} arr1
  */
 export default function isEqual (arr, arr1) {
-    if (_isEqual(arr, arr1, function (e, e1) {
+    if (_isEqual(arr, arr1, (e, e1) => {
         return e == e1;
     }))
         return true;

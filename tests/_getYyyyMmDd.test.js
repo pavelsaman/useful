@@ -1,13 +1,14 @@
 import _getYyyyMmDd from '../modules/_getYyyyMmDd.js';
 import chai from 'chai';
 
-const expect = chai.expect;
+const { expect } = chai;
 
 /* eslint-disable
    max-lines-per-function,
    max-nested-callbacks,
    no-empty-function,
-   no-magic-numbers
+   no-magic-numbers,
+   prefer-arrow-callback
 */
 suite('_getYyyyMmDd()', function () {
 

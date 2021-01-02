@@ -1,13 +1,14 @@
 import useful from '../index.js';
 import chai from 'chai';
 
-const expect = chai.expect;
+const { expect } = chai;
 
 /* eslint-disable
    max-lines-per-function,
    max-nested-callbacks,
    no-empty-function,
-   no-magic-numbers
+   no-magic-numbers,
+   prefer-arrow-callback
 */
 suite('yyyyMmDd()', function () {
 
@@ -17,8 +18,9 @@ suite('yyyyMmDd()', function () {
 
     test('return string today', function () {
         const now = new Date(Date.now());
+        const monthIndex = now.getMonth() + 1;
         const yyyyMmDd = now.getFullYear().toString()
-            + (now.getMonth() + 1).toString()
+            + (monthIndex < 10 ? '0' + monthIndex : monthIndex).toString()
             + (now.getDate() < 10 ? '0' + now.getDate() : now.getDate())
                 .toString();
         expect(useful.yyyyMmDd('')).to.equal(yyyyMmDd);

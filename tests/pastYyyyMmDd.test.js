@@ -1,14 +1,15 @@
 import useful from '../index.js';
 import chai from 'chai';
 
-const expect = chai.expect;
+const { expect } = chai;
 const dayInMs = 86400000;
 
 /* eslint-disable
    max-lines-per-function,
    max-nested-callbacks,
    no-empty-function,
-   no-magic-numbers
+   no-magic-numbers,
+   prefer-arrow-callback
 */
 suite('pastYyyyMmDd()', function () {
 
@@ -18,8 +19,9 @@ suite('pastYyyyMmDd()', function () {
 
     test('return string yesterday', function () {
         const now = new Date(Date.now() - dayInMs);
+        const monthIndex = now.getMonth() + 1;
         const yyyyMmDd = now.getFullYear().toString()
-            + (now.getMonth() + 1).toString()
+            + (monthIndex < 10 ? '0' + monthIndex : monthIndex).toString()
             + (now.getDate() < 10 ? '0' + now.getDate() : now.getDate())
                 .toString();
         expect(useful.pastYyyyMmDd('')).to.equal(yyyyMmDd);

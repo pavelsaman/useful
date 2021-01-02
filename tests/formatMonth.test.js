@@ -1,13 +1,14 @@
 import useful from '../index.js';
 import chai from 'chai';
 
-const expect = chai.expect;
+const { expect } = chai;
 
 /* eslint-disable
    max-lines-per-function,
    max-nested-callbacks,
    no-empty-function,
-   no-magic-numbers
+   no-magic-numbers,
+   prefer-arrow-callback
 */
 suite('formatMonth()', function () {
 
@@ -16,8 +17,9 @@ suite('formatMonth()', function () {
     });
 
     test('return correct month number', function () {
-        const month = (new Date().getMonth() + 1).toString();
-        expect(useful.formatMonth(new Date())).to.equal(month);
+        const month = new Date().getMonth() + 1;
+        const paddedMonth = (month < 10 ? '0' + month : month).toString();
+        expect(useful.formatMonth(new Date())).to.equal(paddedMonth);
     });
 
     test('month undefined', function () {

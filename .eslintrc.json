@@ -30,7 +30,8 @@
         "default-case-last": "error",     
         "default-param-last": "warn",
         "dot-location": ["error", "property"],
-        "grouped-accessor-pairs": "error",        
+        "grouped-accessor-pairs": "error",
+        "no-shadow": "error",
         "no-label-var": "error",
         "no-use-before-define": "error",
         "no-extra-parens": ["warn", "all"],
@@ -83,6 +84,7 @@
         "prefer-regex-literals": "warn",
         "no-return-assign": ["error", "always"],
         "no-new-wrappers": "error",
+        "no-array-constructor": "error",
         "wrap-iife": ["error", "inside"],
         "radix": "error",
         "require-await": "error",
@@ -167,7 +169,7 @@
         ],
         "object-curly-spacing": ["warn", "always"],
         "no-whitespace-before-property": "warn",
-        "nonblock-statement-body-position": ["error", "below"],
+        "nonblock-statement-body-position": ["error", "any"],
         "semi": ["error", "always"],
         "semi-spacing": ["error", { "before": false, "after": true }],
         "semi-style": ["error", "last"],
@@ -249,12 +251,11 @@
         "new-parens": ["error", "always"],
         "newline-per-chained-call": ["warn", { "ignoreChainWithDepth": 4 }],
         "no-new-object": "error",
-        "no-array-constructor": "error",
         "no-unneeded-ternary": "warn",
         "one-var-declaration-per-line": ["error", "initializations"],
         "operator-linebreak": ["warn", "before"],
         "prefer-exponentiation-operator": "warn",
-        "quote-props": ["warn", "consistent"],
+        "quote-props": ["warn", "as-needed"],
         "space-before-blocks": ["warn", "always"],
         "space-before-function-paren": ["warn", "always"],
         "space-in-parens": ["warn", "never"],
@@ -264,6 +265,28 @@
         "switch-colon-spacing": ["warn", {"after": true, "before": false}],
         "template-tag-spacing": ["warn", "always"],
         "wrap-regex": "error",
-        "no-nested-ternary": "warn"
+        "no-nested-ternary": "warn",
+        "object-shorthand": [
+            "warn",
+            "always",
+            {
+                "avoidExplicitReturnArrows": true
+            }
+        ],
+        "no-prototype-builtins": "error",
+        "prefer-object-spread": "error",
+        "no-restricted-globals": [
+            "error",
+            {
+                "name": "isNaN",
+                "message": "Global isNaN coerces non-numbers to numbers. Use Number.isNaN instead."
+            },
+            {
+                "name": "isFinite",
+                "message": "Global isFinite coerces non-numbers to numbers. Use Number.isFinite instead."
+            }
+        ],
+        "prefer-arrow-callback": "warn",
+        "prefer-destructuring": "warn"
     }
 }
