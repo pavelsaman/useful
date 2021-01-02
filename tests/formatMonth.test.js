@@ -18,7 +18,7 @@ suite('formatMonth()', function () {
 
     test('return correct month number', function () {
         const month = new Date().getMonth() + 1;
-        const paddedMonth = (month < 10 ? '0' + month : month).toString();
+        const paddedMonth = month.toString().padStart(2, '0');
         expect(useful.formatMonth(new Date())).to.equal(paddedMonth);
     });
 

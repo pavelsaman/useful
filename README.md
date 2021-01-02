@@ -186,7 +186,7 @@
  * Return nth element of an array.
  * 
  * @param  {object} arr
- * @param  {number} nth Default to 0.
+ * @param  {number} nthEl Default to 0.
  * @param  {number} indexStyle Indexing, either start with 0 or 1. Default to 0.
  */
 ```

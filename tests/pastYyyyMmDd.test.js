@@ -21,9 +21,8 @@ suite('pastYyyyMmDd()', function () {
         const now = new Date(Date.now() - dayInMs);
         const monthIndex = now.getMonth() + 1;
         const yyyyMmDd = now.getFullYear().toString()
-            + (monthIndex < 10 ? '0' + monthIndex : monthIndex).toString()
-            + (now.getDate() < 10 ? '0' + now.getDate() : now.getDate())
-                .toString();
+            + monthIndex.toString().padStart(2, '0')
+            + now.getDate().toString().padStart(2, '0');
         expect(useful.pastYyyyMmDd('')).to.equal(yyyyMmDd);
     });
 
@@ -31,8 +30,7 @@ suite('pastYyyyMmDd()', function () {
         const now = new Date(Date.now() - dayInMs * 2);
         const yyyyMmDd = now.getFullYear().toString()
             + (now.getMonth() + 1).toString()
-            + (now.getDate() < 10 ? '0' + now.getDate() : now.getDate())
-                .toString();
+            + now.getDate().toString().padStart(2, '0');
         expect(useful.pastYyyyMmDd('', 2)).to.equal(yyyyMmDd);
     });
 
