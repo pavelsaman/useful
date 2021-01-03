@@ -29,7 +29,7 @@ suite('pastYyyyMmDd()', function () {
     test('return string two days ago', function () {
         const now = new Date(Date.now() - dayInMs * 2);
         const yyyyMmDd = now.getFullYear().toString()
-            + (now.getMonth() + 1).toString()
+            + (now.getMonth() + 1).toString().padStart(2, '0')
             + now.getDate().toString().padStart(2, '0');
         expect(useful.pastYyyyMmDd('', 2)).to.equal(yyyyMmDd);
     });
