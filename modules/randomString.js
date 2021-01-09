@@ -1,5 +1,5 @@
 'use strict';
-import _random from './_random.js';
+import { _random } from './_random.js';
 
 const DEFAULT_ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -10,7 +10,7 @@ const DEFAULT_ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
  * @param  {number} len Default 10.
  * @param  {string} alphabetString Default [a-zA-Z].
  */
-function randomString (len, alphabetString) {
+export function randomString (len, alphabetString) {
     let alphabet = alphabetString;
 
     if (alphabetString === undefined
@@ -22,5 +22,3 @@ function randomString (len, alphabetString) {
 
     return _random(alphabet, len);
 }
-
-export default randomString;

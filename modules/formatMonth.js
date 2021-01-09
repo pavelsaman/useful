@@ -6,7 +6,7 @@
  * @param  {object} month Date object.
  */
 /* eslint-disable no-magic-numbers */
-export default function formatMonth (month) {
+export function formatMonth (month) {
     if (!(month instanceof Date))
         return undefined;
     const monthIndex = month.getMonth() + 1;

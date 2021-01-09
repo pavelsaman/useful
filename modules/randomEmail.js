@@ -1,8 +1,8 @@
 'use strict';
-import randomNumberString from './randomNumberString.js';
-import dotenv from 'dotenv';
+import { randomNumberString } from './randomNumberString.js';
+import { config } from 'dotenv';
 
-dotenv.config();
+config();
 
 /**
  * Generate random email. If len is 0, the part before '@' will be
@@ -12,7 +12,7 @@ dotenv.config();
  * @param  {string} domainStr Default USEFUL_DEFAULT_DOMAIN env variable
  *  or "inveo.cz".
  */
-export default function randomEmail (len, domainStr) {
+export function randomEmail (len, domainStr) {
     let domain = domainStr;
     if (domainStr === undefined
         || domainStr === null

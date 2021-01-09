@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readFileSync } from 'fs';
 
 const ENCODING = 'utf8';
 
@@ -8,10 +8,10 @@ const ENCODING = 'utf8';
  * @param  {string} filename
  * @return {object} Parsed JSON file as an object literal.
  */
-export default function loadJsonFile (filename) {
+export function loadJsonFile (filename) {
     if (filename === undefined || filename === null)
         return undefined;
     if (typeof filename !== 'string')
         return undefined;
-    return JSON.parse(fs.readFileSync(filename, ENCODING));
+    return JSON.parse(readFileSync(filename, ENCODING));
 }

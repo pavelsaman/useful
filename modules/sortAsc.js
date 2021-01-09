@@ -1,5 +1,5 @@
 'use strict';
-import _sort from "./_sort.js";
+import { _sort } from "./_sort.js";
 
 /**
  * Return a sorted (asc) array clone.
@@ -8,6 +8,6 @@ import _sort from "./_sort.js";
  * 
  * @param  {object} arr
  */
-export default function sortAsc (arr) {
+export function sortAsc (arr) {
     return _sort(arr, (a, b) => a - b);
 }

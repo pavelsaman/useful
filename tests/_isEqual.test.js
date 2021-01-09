@@ -1,4 +1,4 @@
-import _isEqual from '../modules/_isEqual.js';
+import { _isEqual } from '../modules/_isEqual.js';
 import chai from 'chai';
 
 const { expect } = chai;

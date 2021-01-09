@@ -4,7 +4,7 @@ import { customAlphabet } from 'nanoid';
 const DEFAULT_LENGTH = 10;
 const EMPTY_STRING = '';
 
-function _random (customAlphabetString, len = DEFAULT_LENGTH) {
+export function _random (customAlphabetString, len = DEFAULT_LENGTH) {
     let lenStr = len;
     if (len === 0)
         return EMPTY_STRING;
@@ -19,5 +19,3 @@ function _random (customAlphabetString, len = DEFAULT_LENGTH) {
     const nanoid = customAlphabet(customAlphabetString, lenStr);
     return nanoid();
 }
-
-export default _random;

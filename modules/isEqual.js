@@ -1,5 +1,5 @@
 'use strict';
-import _isEqual from './_isEqual.js';
+import { _isEqual } from './_isEqual.js';
 
 /* eslint-disable eqeqeq */
 /**
@@ -9,7 +9,7 @@ import _isEqual from './_isEqual.js';
  * @param  {object} arr
  * @param  {object} arr1
  */
-export default function isEqual (arr, arr1) {
+export function isEqual (arr, arr1) {
     if (_isEqual(arr, arr1, (e, e1) => {
         return e == e1;
     }))

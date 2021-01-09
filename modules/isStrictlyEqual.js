@@ -1,5 +1,5 @@
 'use strict';
-import _isEqual from './_isEqual.js';
+import { _isEqual } from './_isEqual.js';
 
 /**
  * Return true if given arrays are strictly equal, e.i. have the same members
@@ -7,7 +7,7 @@ import _isEqual from './_isEqual.js';
  * @param  {object} arr
  * @param  {object} arr1
  */
-export default function isStrictlyEqual (arr, arr1) {
+export function isStrictlyEqual (arr, arr1) {
     if (_isEqual(arr, arr1, (e, e1) => {
         return e === e1;
     }))

@@ -1,14 +1,14 @@
-import dotenv from 'dotenv';
-import getEnv from './getEnv.js';
+import { config } from 'dotenv';
+import { getEnv } from './getEnv.js';
 
-dotenv.config();
+config();
 
 /**
  * Return language part of a string ('dev-cz' => 'cz').
  * 
  * @param  {string} envVarName Env variable name.
  */
-export default function getLang (envVarName) {
+export function getLang (envVarName) {
     const env = getEnv(envVarName);
     if (!env)
         return undefined;

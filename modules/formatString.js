@@ -1,10 +1,10 @@
 'use strict';
-import _isNotArray from './_isNotArray.js';
-import containsOnly from './containsOnly.js';
+import { _isNotArray } from './_isNotArray.js';
+import { containsOnly } from './containsOnly.js';
 
 const EMPTY = '';
 
-function isValidConfig (configObj) {
+function _isValidConfig (configObj) {
     if (!configObj)
         return false;
     if (configObj.string === undefined
@@ -32,8 +32,8 @@ function isValidConfig (configObj) {
  *  positions    - an array of numbers that represent indices;
  *  insertedChar - a characted to insert at positions
  */
-export default function formatString (configObj) {
-    if (!isValidConfig(configObj))
+export function formatString (configObj) {
+    if (!_isValidConfig(configObj))
         return undefined;
 
     const formattedString = [];

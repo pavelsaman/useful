@@ -1,4 +1,4 @@
-import _getYyyyMmDd from '../modules/_getYyyyMmDd.js';
+import { _getYyyyMmDd } from '../modules/_getYyyyMmDd.js';
 import chai from 'chai';
 
 const { expect } = chai;

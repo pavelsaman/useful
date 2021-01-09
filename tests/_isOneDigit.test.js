@@ -1,4 +1,4 @@
-import _isOneDigit from '../modules/_isOneDigit.js';
+import { _isOneDigit } from '../modules/_isOneDigit.js';
 import chai from 'chai';
 
 const { expect } = chai;

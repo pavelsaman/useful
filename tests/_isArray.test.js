@@ -1,4 +1,4 @@
-import _isArray from '../modules/_isArray.js';
+import { _isArray } from '../modules/_isArray.js';
 import chai from 'chai';
 
 const { expect } = chai;

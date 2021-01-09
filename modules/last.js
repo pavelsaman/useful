@@ -1,13 +1,13 @@
 'use strict';
-import nth from './nth.js';
-import _isNotArray from "./_isNotArray.js";
+import { nth } from './nth.js';
+import { _isNotArray } from "./_isNotArray.js";
 
 /**
  * Return the last element of an array.
  * 
  * @param  {object} arr
  */
-export default function last (arr) {
+export function last (arr) {
     if (_isNotArray(arr))
         return undefined;
     if (arr.length === 0)

@@ -1,12 +1,12 @@
-import dotenv from 'dotenv';
+import { config } from 'dotenv';
 
-dotenv.config();
+config();
 
 /**
  * Return value from an env variable.
  * 
  * @param  {string} envVarName Env variable name.
  */
-export default function getEnv (envVarName) {
+export function getEnv (envVarName) {
     return process.env[envVarName];
 }

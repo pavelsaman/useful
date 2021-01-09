@@ -6,7 +6,7 @@ import axios from 'axios';
  * @param  {object} reqObj Config object
  * @return {Promise} Promise object with response.
  */
-export default function request (reqObj) {
+export function request (reqObj) {
     try {
         return axios(reqObj);
     } catch (error) {

@@ -1,8 +1,8 @@
 'use strict';
-import _isNotString from './_isNotString.js';
-import _getYyyyMmDd from './_getYyyyMmDd.js';
-import formatDay from './formatDay.js';
-import formatMonth from './formatMonth.js';
+import { _isNotString } from './_isNotString.js';
+import { _getYyyyMmDd } from './_getYyyyMmDd.js';
+import { formatDay } from './formatDay.js';
+import { formatMonth } from './formatMonth.js';
 
 const DEFAULT_SEPARATOR = '/';
 
@@ -11,7 +11,7 @@ const DEFAULT_SEPARATOR = '/';
  * 
  * @param  {string} separator Default '/'.
  */
-export default function yyyyMmDd (separator) {
+export function yyyyMmDd (separator) {
     let sep = separator;
     if (_isNotString(separator))
         sep = DEFAULT_SEPARATOR;

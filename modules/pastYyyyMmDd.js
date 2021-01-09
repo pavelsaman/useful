@@ -1,8 +1,8 @@
 'use strict';
-import _isNotString from './_isNotString.js';
-import _getYyyyMmDd from './_getYyyyMmDd.js';
-import formatDay from './formatDay.js';
-import formatMonth from './formatMonth.js';
+import { _isNotString } from './_isNotString.js';
+import { _getYyyyMmDd } from './_getYyyyMmDd.js';
+import { formatDay } from './formatDay.js';
+import { formatMonth } from './formatMonth.js';
 
 const DEFAULT_SEPARATOR = '/';
 const DAY_IN_MS = 86400000;
@@ -14,7 +14,7 @@ const DAY_IN_MS = 86400000;
  * @param  {string} separator Default '/'.
  * @param  {number} daysAgo Default 1.
  */
-export default function pastYyyyMmDd (separator, daysAgo) {
+export function pastYyyyMmDd (separator, daysAgo) {
     let sep = separator;
     let numberOfDays = daysAgo;
 

@@ -1,6 +1,6 @@
 'use strict';
 
-export default function _isString (str) {
+export function _isString (str) {
     if (str === undefined
         || str === null
         || typeof str !== 'string'

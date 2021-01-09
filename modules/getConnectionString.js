@@ -5,7 +5,7 @@
  * @param  {object} infoObj Object with user, password, server, and database
  *  properties.
  */
-export default function getConnectionString (infoObj) {
+export function getConnectionString (infoObj) {
     if (infoObj === undefined || infoObj === null)
         return undefined;
     if (typeof infoObj !== 'object')

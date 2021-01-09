@@ -1,7 +1,7 @@
 'use strict';
-import _isNotArray from "./_isNotArray.js";
+import { _isNotArray } from "./_isNotArray.js";
 
-export default function _isEqual (arr, arr1, func) {
+export function _isEqual (arr, arr1, func) {
     if (_isNotArray(arr) || _isNotArray(arr1))
         return false;
     if (typeof func !== 'function')
