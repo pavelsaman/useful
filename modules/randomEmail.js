@@ -19,5 +19,5 @@ export function randomEmail (len, domainStr) {
         || typeof domainStr !== 'string'
     )
         domain = process.env.USEFUL_DEFAULT_DOMAIN || "inveo.cz";
-    return randomNumberString(len) + "@" + domain;
+    return `${randomNumberString(len)}@${domain}`;
 }

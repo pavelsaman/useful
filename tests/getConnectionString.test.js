@@ -13,54 +13,44 @@ const { expect } = chai;
 suite('getConnectionString()', function () {
 
     test('get connection string', function () {
-        expect(typeof useful.getConnectionString(
-            {
-                user    : "test_user",
-                password: "secret",
-                server  : "test.database.windows.net",
-                database: "TestDB"
-            }
-        )).to.equal('string');
+        expect(typeof useful.getConnectionString({
+            user    : "test_user",
+            password: "secret",
+            server  : "test.database.windows.net",
+            database: "TestDB"
+        })).to.equal('string');
     });
 
     test('user missing property', function () {
-        expect(useful.getConnectionString(
-            {
-                password: "secret",
-                server  : "test.database.windows.net",
-                database: "TestDB"
-            }
-        )).to.equal(undefined);
+        expect(useful.getConnectionString({
+            password: "secret",
+            server  : "test.database.windows.net",
+            database: "TestDB"
+        })).to.equal(undefined);
     });
 
     test('password missing property', function () {
-        expect(useful.getConnectionString(
-            {
-                user    : "test_user",
-                server  : "test.database.windows.net",
-                database: "TestDB"
-            }
-        )).to.equal(undefined);
+        expect(useful.getConnectionString({
+            user    : "test_user",
+            server  : "test.database.windows.net",
+            database: "TestDB"
+        })).to.equal(undefined);
     });
 
     test('server missing property', function () {
-        expect(useful.getConnectionString(
-            {
-                user    : "test_user",
-                pasword : "secret",
-                database: "TestDB"
-            }
-        )).to.equal(undefined);
+        expect(useful.getConnectionString({
+            user    : "test_user",
+            pasword : "secret",
+            database: "TestDB"
+        })).to.equal(undefined);
     });
 
     test('database missing property', function () {
-        expect(useful.getConnectionString(
-            {
-                user   : "test_user",
-                pasword: "secret",
-                server : "test.database.windows.net"
-            }
-        )).to.equal(undefined);
+        expect(useful.getConnectionString({
+            user   : "test_user",
+            pasword: "secret",
+            server : "test.database.windows.net"
+        })).to.equal(undefined);
     });
 
     test('missing properties', function () {

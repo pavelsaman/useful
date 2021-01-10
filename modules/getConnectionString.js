@@ -17,6 +17,6 @@ export function getConnectionString (infoObj) {
     )
         return undefined;
 
-    return 'mssql://' + infoObj.user + ':' + infoObj.password + '@'
-        + infoObj.server + '/' + infoObj.database + '?encrypt=true';
+    const { user, pwd, server, db } = infoObj;
+    return `mssql://${user}:${pwd}@${server}/${db}?encrypt=true'`;
 }

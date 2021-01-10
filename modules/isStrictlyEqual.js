@@ -8,9 +8,6 @@ import { _isEqual } from './_isEqual.js';
  * @param  {object} arr1
  */
 export function isStrictlyEqual (arr, arr1) {
-    if (_isEqual(arr, arr1, (e, e1) => {
-        return e === e1;
-    }))
-        return true;
+    if (_isEqual(arr, arr1, (e, e1) => e === e1)) return true;
     return false;
 }
