@@ -181,7 +181,7 @@
         "semi": ["error", "always"],
         "semi-spacing": ["error", { "before": false, "after": true }],
         "semi-style": ["error", "last"],
-        "generator-star-spacing": ["error", { "before": true, "after": false }],
+        "generator-star-spacing": ["error", { "before": false, "after": true }],
         "no-confusing-arrow": "error",
         "no-duplicate-imports": "error",
         "no-useless-computed-key": "error",
@@ -311,6 +311,13 @@
         "import/no-mutable-exports": "error",
         "import/first": "warn",
         "object-curly-newline": ["warn", { "multiline": true }],
-        "import/no-webpack-loader-syntax": "error"
+        "import/no-webpack-loader-syntax": "error",
+        "no-restricted-properties": [
+            "error",
+            {
+                "object": "Math",
+                "property": "pow"
+            }
+        ]
     }
 }
