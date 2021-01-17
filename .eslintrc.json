@@ -188,7 +188,7 @@
         "no-useless-constructor": "error",
         "no-useless-rename": "error",
         "no-var": "error",
-        "prefer-const": "warn",
+        "prefer-const": "error",
         "prefer-spread": "warn",
         "template-curly-spacing": ["warn", "never"],
         "yield-star-spacing": ["error", { "before": true, "after": false }],
@@ -268,6 +268,7 @@
         "no-new-object": "error",
         "no-unneeded-ternary": "warn",
         "one-var-declaration-per-line": ["error", "initializations"],
+        "one-var": ["error", "never"],
         "operator-linebreak": ["warn", "before"],
         "prefer-exponentiation-operator": "warn",
         "quote-props": ["warn", "as-needed"],
@@ -279,7 +280,7 @@
         "spaced-comment": ["warn", "always", { "block": { "balanced": true } }],
         "switch-colon-spacing": ["warn", {"after": true, "before": false}],
         "template-tag-spacing": ["warn", "always"],
-        "wrap-regex": "error",
+        "wrap-regex": "off",
         "no-nested-ternary": "warn",
         "object-shorthand": [
             "warn",
@@ -318,6 +319,8 @@
                 "object": "Math",
                 "property": "pow"
             }
-        ]
+        ],
+        "no-undef": "error",
+        "no-unused-vars": "error"
     }
 }
