@@ -40,7 +40,20 @@
             "all",
             {
                 "enforceForArrowConditionals": false,
-                "conditionalAssign": false
+                "conditionalAssign": false,
+                "nestedBinaryExpressions": false
+            }
+        ],
+        "no-mixed-operators": [
+            "error",
+            {
+                "groups": [                    
+                    ["&", "|", "^", "~", "<<", ">>", ">>>"],
+                    ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+                    ["&&", "||"],
+                    ["in", "instanceof"]
+                ],
+                "allowSamePrecedence": true
             }
         ],
         "no-template-curly-in-string": "error",
