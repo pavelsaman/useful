@@ -1,17 +1,17 @@
 'use strict';
 import { customAlphabet } from 'nanoid';
 
-const DEFAULT_LENGTH = 10;
-const EMPTY_STRING = '';
+const defaultLength = 10;
+const emptyString = '';
 
-export function _random (customAlphabetString, len = DEFAULT_LENGTH) {
+export function _random (customAlphabetString, len = defaultLength) {
     let lenStr = len;
-    if (len === 0) return EMPTY_STRING;
+    if (len === 0) return emptyString;
     if (customAlphabetString === undefined
         || customAlphabetString === null
         || typeof customAlphabetString !== 'string'
-    ) return EMPTY_STRING;
-    if (!Number.isInteger(len)) lenStr = DEFAULT_LENGTH;
+    ) return emptyString;
+    if (!Number.isInteger(len)) lenStr = defaultLength;
 
     const nanoid = customAlphabet(customAlphabetString, lenStr);
     return nanoid();

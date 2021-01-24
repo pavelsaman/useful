@@ -4,8 +4,8 @@ import { _getYyyyMmDd } from './_getYyyyMmDd.js';
 import { formatDay } from './formatDay.js';
 import { formatMonth } from './formatMonth.js';
 
-const DEFAULT_SEPARATOR = '/';
-const DAY_IN_MS = 86400000;
+const defaultSeparator = '/';
+const dayInMs = 86400000;
 
 /* eslint-disable no-magic-numbers */
 /**
@@ -18,11 +18,11 @@ export function pastYyyyMmDd (separator, daysAgo) {
     let sep = separator;
     let numberOfDays = daysAgo;
 
-    if (_isNotString(separator)) sep = DEFAULT_SEPARATOR;
+    if (_isNotString(separator)) sep = defaultSeparator;
     if (typeof daysAgo !== 'number' || !Number.isFinite(daysAgo))
         numberOfDays = 1;
 
-    const now = _getYyyyMmDd(DAY_IN_MS * numberOfDays);
+    const now = _getYyyyMmDd(dayInMs * numberOfDays);
     return now.getFullYear().toString() + sep + formatMonth(now) + sep
         + formatDay(now);
 }

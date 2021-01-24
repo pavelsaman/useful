@@ -1,7 +1,7 @@
 'use strict';
 import { _random } from './_random.js';
 
-const DEFAULT_ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const defaultAlphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 /**
  * Generate random string. If alphabetString is not passed,
@@ -16,7 +16,7 @@ export function randomString (len, alphabetString) {
     if (alphabetString === undefined
         || alphabetString === null
         || typeof alphabetString !== 'string'
-    ) alphabet = DEFAULT_ALPHABET;
+    ) alphabet = defaultAlphabet;
 
     return _random(alphabet, len);
 }

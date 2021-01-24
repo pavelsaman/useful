@@ -4,7 +4,7 @@ import { _getYyyyMmDd } from './_getYyyyMmDd.js';
 import { formatDay } from './formatDay.js';
 import { formatMonth } from './formatMonth.js';
 
-const DEFAULT_SEPARATOR = '/';
+const defaultSeparator = '/';
 
 /**
  * Return current date in YYYY{{separator}}MM{{separator}}DD.
@@ -13,7 +13,7 @@ const DEFAULT_SEPARATOR = '/';
  */
 export function yyyyMmDd (separator) {
     let sep = separator;
-    if (_isNotString(separator)) sep = DEFAULT_SEPARATOR;
+    if (_isNotString(separator)) sep = defaultSeparator;
 
     const now = _getYyyyMmDd();
     return now.getFullYear().toString() + sep + formatMonth(now) + sep

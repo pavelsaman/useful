@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import YAML from 'yaml';
 
 const { parse } = YAML;
-const ENCODING = 'utf8';
+const encoding = 'utf8';
 
 /**
  * Synchronously reads and parses a YAML file.
@@ -14,5 +14,5 @@ export function loadYamlFile (filename) {
     if (filename === undefined || filename === null) return undefined;
     if (typeof filename !== 'string') return undefined;
 
-    return parse(readFileSync(filename, ENCODING));
+    return parse(readFileSync(filename, encoding));
 }

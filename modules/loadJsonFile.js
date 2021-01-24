@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 
-const ENCODING = 'utf8';
+const encoding = 'utf8';
 
 /**
  * Synchronously reads and parses a JSON file.
@@ -12,5 +12,5 @@ export function loadJsonFile (filename) {
     if (filename === undefined || filename === null) return undefined;
     if (typeof filename !== 'string') return undefined;
 
-    return JSON.parse(readFileSync(filename, ENCODING));
+    return JSON.parse(readFileSync(filename, encoding));
 }
