@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('yyyyMmDd()', function () {
-
     test('return string', function () {
         expect(typeof useful.yyyyMmDd()).to.equal('string');
     });

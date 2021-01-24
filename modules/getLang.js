@@ -10,7 +10,7 @@ config();
  */
 export function getLang (envVarName) {
     const env = getEnv(envVarName);
-    if (!env)
-        return undefined;
+    if (!env) return undefined;
+
     return env.split('-')[1];
 }

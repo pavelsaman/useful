@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('randomNumberString()', function () {
-
     test('default', function () {
         expect(useful.randomNumberString()).to.match(/^[0-9]{10}$/);
     });

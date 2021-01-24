@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('max()', function () {
-
     test('find max', function () {
         expect(useful.max([1, 5, 8])).to.equal(8);
     });

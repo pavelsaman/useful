@@ -17,7 +17,7 @@ export function randomEmail (len, domainStr) {
     if (domainStr === undefined
         || domainStr === null
         || typeof domainStr !== 'string'
-    )
-        domain = process.env.USEFUL_DEFAULT_DOMAIN || "inveo.cz";
+    ) domain = process.env.USEFUL_DEFAULT_DOMAIN || "inveo.cz";
+
     return `${randomNumberString(len)}@${domain}`;
 }

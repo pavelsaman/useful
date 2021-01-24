@@ -175,7 +175,7 @@
         "no-multiple-empty-lines": [
             "warn",
             {
-                "max": 2,
+                "max": 1,
                 "maxEOF": 1,
                 "maxBOF": 1
             }
@@ -228,11 +228,11 @@
         "comma-dangle": [
             "warn",
             {
-                "arrays": "only-multiline",
-                "objects": "only-multiline",
-                "imports": "never",
-                "exports": "never",
-                "functions": "never"
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "always-multiline"
             }
         ],
         "comma-spacing": ["warn", { "before": false, "after": true }],
@@ -277,7 +277,7 @@
         "lines-between-class-members": ["warn", "always"],
         "new-cap": "error",
         "new-parens": ["error", "always"],
-        "newline-per-chained-call": ["warn", { "ignoreChainWithDepth": 4 }],
+        "newline-per-chained-call": ["warn", { "ignoreChainWithDepth": 3 }],
         "no-new-object": "error",
         "no-unneeded-ternary": "warn",
         "one-var-declaration-per-line": ["error", "initializations"],
@@ -334,6 +334,8 @@
             }
         ],
         "no-undef": "error",
-        "no-unused-vars": "error"
+        "no-unused-vars": "error",
+        "padded-blocks": ["warn", "never"],
+        "comma-style": ["error", "last"]
     }
 }

@@ -7,9 +7,8 @@ import { _isNotArray } from './_isNotArray.js';
  * @param  {object} arr
  */
 export function min (arr) {
-    if (_isNotArray(arr))
-        return undefined;
-    if (arr.length === 0)
-        return undefined;
+    if (_isNotArray(arr)) return undefined;
+    if (arr.length === 0) return undefined;
+
     return Math.min(...arr);
 }

@@ -33,8 +33,7 @@ function _isValidConfig (configObj) {
  *  insertedChar - a characted to insert at positions
  */
 export function formatString (configObj) {
-    if (!_isValidConfig(configObj))
-        return undefined;
+    if (!_isValidConfig(configObj)) return undefined;
 
     const formattedString = [];
     for (let i = 0; i < configObj.string.length; i++) {

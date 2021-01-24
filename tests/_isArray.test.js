@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('_isArray()', function () {
-
     test('typeof', function () {
         expect(typeof _isArray([])).to.equal('boolean');
     });

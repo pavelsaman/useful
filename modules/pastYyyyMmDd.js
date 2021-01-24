@@ -18,8 +18,7 @@ export function pastYyyyMmDd (separator, daysAgo) {
     let sep = separator;
     let numberOfDays = daysAgo;
 
-    if (_isNotString(separator))
-        sep = DEFAULT_SEPARATOR;
+    if (_isNotString(separator)) sep = DEFAULT_SEPARATOR;
     if (typeof daysAgo !== 'number' || !Number.isFinite(daysAgo))
         numberOfDays = 1;
 

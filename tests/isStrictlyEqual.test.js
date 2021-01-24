@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('isStrictlyEqual()', function () {
-
     test('equal arrays', function () {
         expect(useful.isStrictlyEqual([1, 2], [1, 2])).to.equal(true);
     });

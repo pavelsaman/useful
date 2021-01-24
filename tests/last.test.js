@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('last()', function () {
-
     test('empty array', function () {
         expect(useful.last([])).to.equal(undefined);
     });

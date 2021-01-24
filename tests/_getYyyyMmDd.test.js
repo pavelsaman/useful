@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('_getYyyyMmDd()', function () {
-
     test('typeof', function () {
         expect(typeof _getYyyyMmDd()).to.equal('object');
     });

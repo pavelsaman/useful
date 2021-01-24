@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('getEnv()', function () {
-
     test('get env variable value', function () {
         process.env.TTT = '5';
         expect(useful.getEnv('TTT')).to.equal('5');

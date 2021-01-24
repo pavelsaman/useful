@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('nth()', function () {
-
     test('undefined, not array', function () {
         expect(useful.nth(undefined)).to.equal(undefined);
     });

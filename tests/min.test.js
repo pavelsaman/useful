@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('min()', function () {
-
     test('find min', function () {
         expect(useful.min([1, 5, 8])).to.equal(1);
     });

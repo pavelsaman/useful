@@ -7,7 +7,7 @@
  */
 /* eslint-disable no-magic-numbers */
 export function formatDay (day) {
-    if (!(day instanceof Date))
-        return undefined;
+    if (!(day instanceof Date)) return undefined;
+
     return day.getDate().toString().padStart(2, '0');
 }

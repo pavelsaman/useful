@@ -7,8 +7,8 @@
  */
 /* eslint-disable no-magic-numbers */
 export function formatMonth (month) {
-    if (!(month instanceof Date))
-        return undefined;
+    if (!(month instanceof Date)) return undefined;
+
     const monthIndex = month.getMonth() + 1;
     return monthIndex.toString().padStart(2, '0');
 }

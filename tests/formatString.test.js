@@ -11,12 +11,11 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('formatString()', function () {
-
     test('insert spaces', function () {
         expect(useful.formatString({
             string      : '+420739844920',
             positions   : [3, 6, 9],
-            insertedChar: ' '
+            insertedChar: ' ',
         })).to.equal('+420 739 844 920');
     });
 
@@ -24,7 +23,7 @@ suite('formatString()', function () {
         expect(useful.formatString({
             string      : '+420739844920',
             positions   : [3],
-            insertedChar: '-'
+            insertedChar: '-',
         })).to.equal('+420-739844920');
     });
 
@@ -32,7 +31,7 @@ suite('formatString()', function () {
         expect(useful.formatString({
             string      : '420739844920',
             positions   : [],
-            insertedChar: ''
+            insertedChar: '',
         })).to.equal('420739844920');
     });
 
@@ -40,28 +39,28 @@ suite('formatString()', function () {
         expect(useful.formatString({
             string      : '420739844920',
             positions   : [3, 6],
-            insertedChar: ''
+            insertedChar: '',
         })).to.equal('420739844920');
     });
 
     test('no string', function () {
         expect(useful.formatString({
             positions   : [3, 6],
-            insertedChar: ''
+            insertedChar: '',
         })).to.equal(undefined);
     });
 
     test('no positions', function () {
         expect(useful.formatString({
             string      : '789456123',
-            insertedChar: ''
+            insertedChar: '',
         })).to.equal(undefined);
     });
 
     test('no insertedChar', function () {
         expect(useful.formatString({
             string   : '789456123',
-            positions: [3, 6]
+            positions: [3, 6],
         })).to.equal(undefined);
     });
 
@@ -89,7 +88,7 @@ suite('formatString()', function () {
         expect(useful.formatString({
             string      : '+420739844920',
             positions   : [3, '6', 9],
-            insertedChar: ' '
+            insertedChar: ' ',
         })).to.equal(undefined);
     });
 });

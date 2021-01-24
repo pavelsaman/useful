@@ -16,9 +16,7 @@ export function randomNumberString (len, alphabetString) {
     if (alphabetString === undefined
         || alphabetString === null
         || typeof alphabetString !== 'string'
-    ) {
-        alphabet = DEFAULT_ALPHABET;
-    }
+    ) alphabet = DEFAULT_ALPHABET;
 
     return _random(alphabet, len);
 }

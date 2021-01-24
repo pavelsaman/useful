@@ -11,13 +11,12 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('getConnectionString()', function () {
-
     test('get connection string', function () {
         expect(typeof useful.getConnectionString({
             user    : "test_user",
             password: "secret",
             server  : "test.database.windows.net",
-            database: "TestDB"
+            database: "TestDB",
         })).to.equal('string');
     });
 
@@ -25,7 +24,7 @@ suite('getConnectionString()', function () {
         expect(useful.getConnectionString({
             password: "secret",
             server  : "test.database.windows.net",
-            database: "TestDB"
+            database: "TestDB",
         })).to.equal(undefined);
     });
 
@@ -33,7 +32,7 @@ suite('getConnectionString()', function () {
         expect(useful.getConnectionString({
             user    : "test_user",
             server  : "test.database.windows.net",
-            database: "TestDB"
+            database: "TestDB",
         })).to.equal(undefined);
     });
 
@@ -41,7 +40,7 @@ suite('getConnectionString()', function () {
         expect(useful.getConnectionString({
             user    : "test_user",
             pasword : "secret",
-            database: "TestDB"
+            database: "TestDB",
         })).to.equal(undefined);
     });
 
@@ -49,7 +48,7 @@ suite('getConnectionString()', function () {
         expect(useful.getConnectionString({
             user   : "test_user",
             pasword: "secret",
-            server : "test.database.windows.net"
+            server : "test.database.windows.net",
         })).to.equal(undefined);
     });
 

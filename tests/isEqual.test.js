@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('isEqual()', function () {
-
     test('different arrays', function () {
         expect(useful.isEqual([1, 2], [1, 2])).to.equal(true);
     });

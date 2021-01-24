@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('loadYamlFile()', function () {
-
     test('return object literal', function () {
         expect(typeof useful.loadYamlFile('./tests/static/test.yml'))
             .to.equal('object');
@@ -22,13 +21,13 @@ suite('loadYamlFile()', function () {
             people: [
                 {
                     name: 'pavel',
-                    age : 29
+                    age : 29,
                 },
                 {
                     name: 'shark',
-                    age : 205
-                }
-            ]
+                    age : 205,
+                },
+            ],
         };
 
         expect(useful.loadYamlFile('./tests/static/test.yml'))

@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('formatMonth()', function () {
-
     test('return string', function () {
         expect(typeof useful.formatMonth(new Date())).to.equal('string');
     });

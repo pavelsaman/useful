@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('getEnvWithoutLang()', function () {
-
     test('get value', function () {
         process.env.TTT = 'dev-cz';
         expect(useful.getEnvWithoutLang('TTT')).to.equal('dev');

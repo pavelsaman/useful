@@ -12,7 +12,6 @@ const dayInMs = 86400000;
    prefer-arrow-callback
 */
 suite('pastYyyyMmDd()', function () {
-
     test('return string', function () {
         expect(typeof useful.pastYyyyMmDd()).to.equal('string');
     });

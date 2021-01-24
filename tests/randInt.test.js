@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('randInt()', function () {
-
     test('throws for params.length === 0', function () {
         expect(function () {
             useful.randInt();

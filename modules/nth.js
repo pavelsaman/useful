@@ -9,9 +9,8 @@ import { _isNotArray } from "./_isNotArray.js";
  * @param  {number} indexStyle Indexing, either start with 0 or 1. Default to 0.
  */
 export function nth (arr, nthEl = 0, indexStyle = 0) {
-    if (_isNotArray(arr))
-        return undefined;
-    if (indexStyle !== 0 && indexStyle !== 1)
-        return undefined;
+    if (_isNotArray(arr)) return undefined;
+    if (indexStyle !== 0 && indexStyle !== 1) return undefined;
+
     return arr[indexStyle === 0 ? nthEl : nthEl - 1];
 }

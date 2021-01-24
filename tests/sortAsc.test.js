@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('sortAsc()', function () {
-
     test('sorted', function () {
         expect(useful.sortAsc([8, 15, 2]))
             .to.include.ordered.members([2, 8, 15]);

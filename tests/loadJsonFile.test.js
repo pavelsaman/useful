@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('loadJsonFile()', function () {
-
     test('load package.json', function () {
         expect(useful.loadJsonFile('package.json')).not.to.equal(undefined);
     });
@@ -21,13 +20,13 @@ suite('loadJsonFile()', function () {
             people: [
                 {
                     name: 'pavel',
-                    age : 29
+                    age : 29,
                 },
                 {
                     name: 'shark',
-                    age : 205
-                }
-            ]
+                    age : 205,
+                },
+            ],
         };
 
         expect(useful.loadJsonFile('./tests/static/test.json'))

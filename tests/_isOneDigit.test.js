@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('_isOneDigit()', function () {
-
     test('not number', function () {
         expect(_isOneDigit('a')).to.equal(undefined);
     });

@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('randomEmail()', function () {
-
     test('default', function () {
         expect(useful.randomEmail()).to.match(/^[0-9]{10}@inveo[.]cz$/);
     });

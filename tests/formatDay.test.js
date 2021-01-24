@@ -11,7 +11,6 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('formatDay()', function () {
-
     test('return string', function () {
         expect(typeof useful.formatDay(new Date())).to.equal('string');
     });

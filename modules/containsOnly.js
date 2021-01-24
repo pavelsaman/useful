@@ -8,10 +8,8 @@ import { _isNotArray } from './_isNotArray.js';
  * @param  {function} func A function that performs the check
  */
 export function containsOnly (arr, func) {
-    if (_isNotArray(arr))
-        return undefined;
-    if (typeof func !== 'function')
-        return undefined;
+    if (_isNotArray(arr)) return undefined;
+    if (typeof func !== 'function') return undefined;
 
     for (const el of arr) {
         if (!func(el))
