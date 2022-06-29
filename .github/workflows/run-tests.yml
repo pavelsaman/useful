@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-    path-ignore:
+    paths-ignore:
       - '.github/'
       - '**.md'
       - 'tests/'
@@ -19,7 +19,6 @@ jobs:
       matrix:
         node:
          - 12
-         - 13
          - 14
          - 15  
          - 16
