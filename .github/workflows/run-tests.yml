@@ -5,9 +5,9 @@ on:
     branches:
       - master
     paths-ignore:
-      - '.github/'
+      - '.github/**'
       - '**.md'
-      - 'tests/'
+      - 'tests/**'
   workflow_dispatch:
 
 jobs:
