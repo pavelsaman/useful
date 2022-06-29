@@ -1,3 +1,4 @@
 doc-parser.pl
 .env
 .github/
+tests/
