@@ -1,15 +1,16 @@
 {
     "name": "useful-library",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "description": "A set of functions that are useful as helpers for my e2e testing.",
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "lint": "./node_modules/.bin/eslint --cache \"**/**/*.js\"",
-        "lint-fix": "./node_modules/.bin/eslint --cache --fix \"**/**/*.js\"",
+        "lint": "eslint --cache \"**/**/*.js\"",
+        "lint:fix": "eslint --cache --fix \"**/**/*.js\"",
         "l": "npm run lint",
-        "test-only": "./node_modules/.bin/mocha -i --grep @retired",
-        "test": "npm run lint && npm run test-only",
+        "test:only": "mocha",
+        "test:debug": "mocha --grep @debug",
+        "test": "npm run lint && npm run test:only",
         "t": "npm run test",
         "doc": "./doc-parser.pl -f ./modules"
     },

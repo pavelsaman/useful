@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -11,7 +11,7 @@ our $VERSION = 1.000;
 
 Readonly my $INTO_FILE      => 'README.md';
 Readonly my $HEADING        => '###';
-Readonly my $LANGUAGE       => 'javascript';
+Readonly my $LANGUAGE       => 'js';
 Readonly my $DEFAULT_ENTRY  => q{.};
 Readonly my $CURRENT_FOLDER => q{.};
 Readonly my $UP_FOLDER      => q{..};

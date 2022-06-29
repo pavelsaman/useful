@@ -1,6 +1,6 @@
 ### containsOnly()
 
-```javascript
+```js
 /**
  * Return true if an array contains only certain elements.
  * 
@@ -9,9 +9,19 @@
  */
 ```
 
+### dateAsISO()
+
+```js
+/**
+ * Returns the date portion of Date, e.g. "2022-06-12"
+ * 
+ * @param  {Date} date
+ */
+```
+
 ### first()
 
-```javascript
+```js
 /**
  * Return the first element of an array.
  * 
@@ -21,7 +31,7 @@
 
 ### formatDay()
 
-```javascript
+```js
 /**
  * Return day formatted as DD.
  * 
@@ -31,7 +41,7 @@
 
 ### formatMonth()
 
-```javascript
+```js
 /**
  * Return MM indexed from 1 as string.
  * 
@@ -41,7 +51,7 @@
 
 ### formatString()
 
-```javascript
+```js
 /**
  * Return a formatted string.
  * 
@@ -54,7 +64,7 @@
 
 ### getConnectionString()
 
-```javascript
+```js
 /**
  * Return connection string for MSSQL DB.
  * 
@@ -65,7 +75,7 @@
 
 ### getEnv()
 
-```javascript
+```js
 /**
  * Return value from an env variable.
  * 
@@ -75,7 +85,7 @@
 
 ### getEnvWithoutLang()
 
-```javascript
+```js
 /**
  * Return environment part of a string ('dev-cz' => 'dev').
  * 
@@ -85,7 +95,7 @@
 
 ### getLang()
 
-```javascript
+```js
 /**
  * Return language part of a string ('dev-cz' => 'cz').
  * 
@@ -95,7 +105,7 @@
 
 ### isEqual()
 
-```javascript
+```js
 /**
  * Return true if given arrays are equal, e.i. have the same members in the
  * same order.
@@ -107,7 +117,7 @@
 
 ### isStrictlyEqual()
 
-```javascript
+```js
 /**
  * Return true if given arrays are strictly equal, e.i. have the same members
  * in the same order.
@@ -118,7 +128,7 @@
 
 ### last()
 
-```javascript
+```js
 /**
  * Return the last element of an array.
  * 
@@ -128,7 +138,7 @@
 
 ### loadJsonFile()
 
-```javascript
+```js
 /**
  * Synchronously reads and parses a JSON file.
  * 
@@ -139,7 +149,7 @@
 
 ### loadYamlFile()
 
-```javascript
+```js
 /**
  * Synchronously reads and parses a YAML file.
  * 
@@ -150,7 +160,7 @@
 
 ### max()
 
-```javascript
+```js
 /**
  * Return maximum value from an array.
  * 
@@ -160,7 +170,7 @@
 
 ### min()
 
-```javascript
+```js
 /**
  * Return minimum value from an array.
  * 
@@ -170,7 +180,7 @@
 
 ### networkRequest()
 
-```javascript
+```js
 /**
  * Request a resource with axios.
  * 
@@ -181,7 +191,7 @@
 
 ### nth()
 
-```javascript
+```js
 /**
  * Return nth element of an array.
  * 
@@ -193,7 +203,7 @@
 
 ### pastYyyyMmDd()
 
-```javascript
+```js
 /**
  * Return past date in YYYY{{separator}}MM{{separator}}DD.
  * 
@@ -204,7 +214,7 @@
 
 ### randInt()
 
-```javascript
+```js
 /**
  * Return a random integer between min and max inclusive.
  * 
@@ -215,7 +225,7 @@
 
 ### randomEmail()
 
-```javascript
+```js
 /**
  * Generate random email. If len is 0, the part before '@' will be
  * missing. If domainStr is '', no domain will be included.
@@ -228,7 +238,7 @@
 
 ### randomNumberString()
 
-```javascript
+```js
 /**
  * Generate random number string. If alphabetString is not passed,
  * only [0-9] is a considered alphabet.
@@ -240,7 +250,7 @@
 
 ### randomString()
 
-```javascript
+```js
 /**
  * Generate random string. If alphabetString is not passed,
  * only [a-zA-Z] is a considered alphabet.
@@ -252,7 +262,7 @@
 
 ### sortAsc()
 
-```javascript
+```js
 /**
  * Return a sorted (asc) array clone.
  * 
@@ -264,7 +274,7 @@
 
 ### sortDesc()
 
-```javascript
+```js
 /**
  * Return a sorted (desc) array clone.
  * 
@@ -276,7 +286,7 @@
 
 ### yyyyMmDd()
 
-```javascript
+```js
 /**
  * Return current date in YYYY{{separator}}MM{{separator}}DD.
  * 
