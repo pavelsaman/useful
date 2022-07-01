@@ -8,7 +8,6 @@ export { sortDesc } from './sortDesc.js';
 export { sortAsc } from './sortAsc.js';
 export { max } from './max.js';
 export { min } from './min.js';
-export { request } from './networkRequest.js';
 export { formatString } from './formatString.js';
 export { containsOnly } from './containsOnly.js';
 export { randomString } from './randomString.js';
