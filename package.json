@@ -1,6 +1,6 @@
 {
     "name": "useful-library",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "description": "A set of helper functions.",
     "main": "index.js",
     "type": "module",
@@ -8,9 +8,8 @@
         "lint": "eslint --cache \"**/**/*.js\"",
         "lint:fix": "eslint --cache --fix \"**/**/*.js\"",
         "l": "npm run lint",
-        "test:only": "mocha",
+        "test": "mocha",
         "test:debug": "mocha --grep @debug",
-        "test": "npm run lint && npm run test:only",
         "t": "npm run test",
         "doc": "./doc-parser.pl -f ./modules"
     },
@@ -35,7 +34,7 @@
         "chai": "^4.2.0",
         "eslint": "^7.15.0",
         "eslint-plugin-import": "^2.22.1",
-        "mocha": "^8.2.1"
+        "mocha": "^10.0.0"
     },
     "dependencies": {
         "axios": "^0.21.0",
