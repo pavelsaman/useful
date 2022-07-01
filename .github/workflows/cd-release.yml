@@ -12,12 +12,23 @@ on:
 
 jobs:
 
+  audit:
+    name: Audit packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Audit packages
+        run: npm audit --audit-level moderate
+        env:
+          CI: true
+
   build:
-    name: Node ${{ matrix.node }}
+    name: Node ${{ matrix.node_version }}
+    needs: audit
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node:
+        node_version:
          - 12
          - 14
          - 15  
@@ -25,20 +36,19 @@ jobs:
          - 17
          - 18       
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup node
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - id: build
+        uses: ./.github/actions/build
         with:
-          node-version: ${{ matrix.node }}
-      - run: npm install
-      - run: npm test
+          node_version: ${{ matrix.node_version }}
 
   release:
     name: Release to npm
     needs: build
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
