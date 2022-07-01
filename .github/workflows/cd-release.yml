@@ -24,6 +24,7 @@ jobs:
 
   build:
     name: Node ${{ matrix.node_version }}
+    needs: audit
     runs-on: ubuntu-latest
     strategy:
       matrix:
