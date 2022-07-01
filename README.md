@@ -178,17 +178,6 @@
  */
 ```
 
-### networkRequest()
-
-```js
-/**
- * Request a resource with axios.
- * 
- * @param  {object} reqObj Config object
- * @return {Promise} Promise object with response.
- */
-```
-
 ### nth()
 
 ```js
