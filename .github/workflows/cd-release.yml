@@ -37,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: build
-        uses: '.github/actions/build'
+        uses: ./.github/actions/build
         with:
           node_version: ${{ matrix.node_version }}
 
