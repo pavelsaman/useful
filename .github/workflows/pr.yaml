@@ -1,9 +1,7 @@
-name: Run tests and publish
+name: Build
 
 on:
-  push:
-    branches:
-      - master
+  pull_request:
     paths-ignore:
       - '.github/**'
       - '**.md'
@@ -23,7 +21,7 @@ jobs:
           CI: true
 
   build:
-    name: Build with Node ${{ matrix.node_version }}
+    name: Node ${{ matrix.node_version }}
     needs: audit
     runs-on: ubuntu-latest
     strategy:
@@ -41,18 +39,3 @@ jobs:
         uses: ./.github/actions/build
         with:
           node_version: ${{ matrix.node_version }}
-
-  release:
-    name: Release to npm
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          registry-url: 'https://registry.npmjs.org'
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
