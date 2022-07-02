@@ -3,3 +3,8 @@ doc-parser.pl
 .github/
 tests/
 .prettierrc.json
+.prettierignore
+.eslintrc.json
+.eslintcache
+.gitignore
+.mocharc.json
