@@ -11,13 +11,13 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('getLang()', function () {
-    test('get value', function () {
-        process.env.TTT = 'dev-cz';
-        expect(useful.getLang('TTT')).to.equal('cz');
-        delete process.env.TTT;
-    });
+  test('get value', function () {
+    process.env.TTT = 'dev-cz';
+    expect(useful.getLang('TTT')).to.equal('cz');
+    delete process.env.TTT;
+  });
 
-    test('name undefined', function () {
-        expect(useful.getLang(undefined)).to.equal(undefined);
-    });
+  test('name undefined', function () {
+    expect(useful.getLang(undefined)).to.equal(undefined);
+  });
 });

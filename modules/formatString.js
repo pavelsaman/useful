@@ -4,43 +4,40 @@ import { containsOnly } from './containsOnly.js';
 
 const EMPTY = '';
 
-function _isValidConfig (configObj) {
-    if (!configObj)
-        return false;
-    if (configObj.string === undefined
-        || configObj.positions === undefined
-        || configObj.insertedChar === undefined
-    )
-        return false;
-    if (typeof configObj.string !== 'string')
-        return false;
-    if (_isNotArray(configObj.positions))
-        return false;
-    if (!containsOnly(configObj.positions, el => typeof el === 'number'))
-        return false;
-    if (typeof configObj.insertedChar !== 'string')
-        return false;
+function _isValidConfig(configObj) {
+  if (!configObj) return false;
+  if (
+    configObj.string === undefined ||
+    configObj.positions === undefined ||
+    configObj.insertedChar === undefined
+  )
+    return false;
+  if (typeof configObj.string !== 'string') return false;
+  if (_isNotArray(configObj.positions)) return false;
+  if (!containsOnly(configObj.positions, el => typeof el === 'number'))
+    return false;
+  if (typeof configObj.insertedChar !== 'string') return false;
 
-    return true;
+  return true;
 }
 
 /**
  * Return a formatted string.
- * 
+ *
  * @param  {object} configObj Three properties are mandatory:
  *  string       - an input string;
  *  positions    - an array of numbers that represent indices;
  *  insertedChar - a characted to insert at positions
  */
-export function formatString (configObj) {
-    if (!_isValidConfig(configObj)) return undefined;
+export function formatString(configObj) {
+  if (!_isValidConfig(configObj)) return undefined;
 
-    const formattedString = [];
-    for (let i = 0; i < configObj.string.length; i++) {
-        formattedString.push(configObj.string[i]);
-        if (configObj.positions.indexOf(i) >= 0)
-            formattedString.push(configObj.insertedChar);
-    }
+  const formattedString = [];
+  for (let i = 0; i < configObj.string.length; i++) {
+    formattedString.push(configObj.string[i]);
+    if (configObj.positions.indexOf(i) >= 0)
+      formattedString.push(configObj.insertedChar);
+  }
 
-    return formattedString.join(EMPTY);
+  return formattedString.join(EMPTY);
 }

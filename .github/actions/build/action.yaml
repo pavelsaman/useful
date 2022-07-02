@@ -9,7 +9,7 @@ inputs:
     default: '18'
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: Setup node
       uses: actions/setup-node@v3
@@ -23,7 +23,7 @@ runs:
     - name: Lint
       shell: bash
       run: npm run lint
-      
+
     - name: Test
       shell: bash
       run: npm test

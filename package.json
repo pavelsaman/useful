@@ -1,44 +1,46 @@
 {
-    "name": "useful-library",
-    "version": "1.2.7",
-    "description": "A set of helper functions.",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-        "lint": "eslint --cache \"**/**/*.js\"",
-        "lint:fix": "eslint --cache --fix \"**/**/*.js\"",
-        "l": "npm run lint",
-        "test": "mocha",
-        "test:debug": "mocha --grep @debug",
-        "t": "npm run test",
-        "doc": "./doc-parser.pl -f ./modules"
-    },
-    "keywords": [
-        "helpers",
-        "function",
-        "test",
-        "e2e",
-        "library"
-    ],
-    "author": "Pavel Saman",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/pavelsaman/useful/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pavelsaman/useful.git"
-    },
-    "homepage": "https://github.com/pavelsaman/useful",
-    "devDependencies": {
-        "chai": "^4.2.0",
-        "eslint": "^7.15.0",
-        "eslint-plugin-import": "^2.22.1",
-        "mocha": "^10.0.0"
-    },
-    "dependencies": {
-        "dotenv": "^8.2.0",
-        "nanoid": "^3.1.20",
-        "yaml": "^1.10.0"
-    }
+  "name": "useful-library",
+  "version": "1.2.8",
+  "description": "A set of helper functions.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint --cache \"**/**/*.js\"",
+    "lint:fix": "eslint --cache --fix \"**/**/*.js\"",
+    "l": "npm run lint",
+    "test": "mocha",
+    "test:debug": "mocha --grep @debug",
+    "t": "npm run test",
+    "doc": "./doc-parser.pl -f ./modules",
+    "pretty": "prettier --write **/*.js"
+  },
+  "keywords": [
+    "helpers",
+    "function",
+    "test",
+    "e2e",
+    "library"
+  ],
+  "author": "Pavel Saman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pavelsaman/useful/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pavelsaman/useful.git"
+  },
+  "homepage": "https://github.com/pavelsaman/useful",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "mocha": "^10.0.0",
+    "prettier": "~2.7.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "nanoid": "^3.1.20",
+    "yaml": "^1.10.0"
+  }
 }

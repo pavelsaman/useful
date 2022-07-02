@@ -1,4 +1,4 @@
-{    
-    "spec": "./tests/*.test.js",    
-    "ui": "tdd"
+{
+  "spec": "./tests/*.test.js",
+  "ui": "tdd"
 }
