@@ -78,6 +78,9 @@ jobs:
     name: Release to gh registry
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v3
