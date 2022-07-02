@@ -11,32 +11,27 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('_isEqual()', function () {
-    test('typeof', function () {
-        expect(typeof _isEqual([1], [2])).to.equal('boolean');
-    });
+  test('typeof', function () {
+    expect(typeof _isEqual([1], [2])).to.equal('boolean');
+  });
 
-    test('not equal arrays', function () {
-        expect(_isEqual([1], [2], (a, b) => a === b))
-            .to.equal(false);
-    });
+  test('not equal arrays', function () {
+    expect(_isEqual([1], [2], (a, b) => a === b)).to.equal(false);
+  });
 
-    test('equal arrays', function () {
-        expect(_isEqual([2], [2], (a, b) => a === b))
-            .to.equal(true);
-    });
+  test('equal arrays', function () {
+    expect(_isEqual([2], [2], (a, b) => a === b)).to.equal(true);
+  });
 
-    test('first is not array', function () {
-        expect(_isEqual(1, [2], (a, b) => a === b))
-            .to.equal(false);
-    });
+  test('first is not array', function () {
+    expect(_isEqual(1, [2], (a, b) => a === b)).to.equal(false);
+  });
 
-    test('second is not array', function () {
-        expect(_isEqual([1], 2, (a, b) => a === b))
-            .to.equal(false);
-    });
+  test('second is not array', function () {
+    expect(_isEqual([1], 2, (a, b) => a === b)).to.equal(false);
+  });
 
-    test('no callback', function () {
-        expect(_isEqual([1], [2]))
-            .to.equal(false);
-    });
+  test('no callback', function () {
+    expect(_isEqual([1], [2])).to.equal(false);
+  });
 });

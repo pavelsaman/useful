@@ -1,5 +1,5 @@
 'use strict';
 
-export function _getYyyyMmDd (offsetInMs = 0) {
-    return new Date(Date.now() - offsetInMs);
+export function _getYyyyMmDd(offsetInMs = 0) {
+  return new Date(Date.now() - offsetInMs);
 }

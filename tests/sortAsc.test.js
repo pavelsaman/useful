@@ -11,16 +11,15 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('sortAsc()', function () {
-    test('sorted', function () {
-        expect(useful.sortAsc([8, 15, 2]))
-            .to.include.ordered.members([2, 8, 15]);
-    });
+  test('sorted', function () {
+    expect(useful.sortAsc([8, 15, 2])).to.include.ordered.members([2, 8, 15]);
+  });
 
-    test('primitive', function () {
-        expect(useful.sortAsc(1)).to.equal(undefined);
-    });
+  test('primitive', function () {
+    expect(useful.sortAsc(1)).to.equal(undefined);
+  });
 
-    test('object', function () {
-        expect(useful.sortAsc({ a: 1 })).to.equal(undefined);
-    });
+  test('object', function () {
+    expect(useful.sortAsc({ a: 1 })).to.equal(undefined);
+  });
 });

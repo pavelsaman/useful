@@ -11,15 +11,15 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('_isArray()', function () {
-    test('typeof', function () {
-        expect(typeof _isArray([])).to.equal('boolean');
-    });
+  test('typeof', function () {
+    expect(typeof _isArray([])).to.equal('boolean');
+  });
 
-    test('returns true for array', function () {
-        expect(_isArray([])).to.equal(true);
-    });
+  test('returns true for array', function () {
+    expect(_isArray([])).to.equal(true);
+  });
 
-    test('returns false for not array', function () {
-        expect(_isArray({})).to.equal(false);
-    });
+  test('returns false for not array', function () {
+    expect(_isArray({})).to.equal(false);
+  });
 });

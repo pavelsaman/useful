@@ -11,23 +11,23 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('min()', function () {
-    test('find min', function () {
-        expect(useful.min([1, 5, 8])).to.equal(1);
-    });
+  test('find min', function () {
+    expect(useful.min([1, 5, 8])).to.equal(1);
+  });
 
-    test('empty array', function () {
-        expect(useful.min([])).to.equal(undefined);
-    });
+  test('empty array', function () {
+    expect(useful.min([])).to.equal(undefined);
+  });
 
-    test('object', function () {
-        expect(useful.min({})).to.equal(undefined);
-    });
+  test('object', function () {
+    expect(useful.min({})).to.equal(undefined);
+  });
 
-    test('null', function () {
-        expect(useful.min(null)).to.equal(undefined);
-    });
+  test('null', function () {
+    expect(useful.min(null)).to.equal(undefined);
+  });
 
-    test('undefined', function () {
-        expect(useful.min(undefined)).to.equal(undefined);
-    });
+  test('undefined', function () {
+    expect(useful.min(undefined)).to.equal(undefined);
+  });
 });

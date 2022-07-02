@@ -5,7 +5,6 @@ on:
     - cron: 0 20 * * 6
 
 jobs:
-
   audit:
     name: Audit packages
     runs-on: ubuntu-latest

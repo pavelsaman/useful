@@ -8,14 +8,15 @@ const defaultSeparator = '/';
 
 /**
  * Return current date in YYYY{{separator}}MM{{separator}}DD.
- * 
+ *
  * @param  {string} separator Default '/'.
  */
-export function yyyyMmDd (separator) {
-    let sep = separator;
-    if (_isNotString(separator)) sep = defaultSeparator;
+export function yyyyMmDd(separator) {
+  let sep = separator;
+  if (_isNotString(separator)) sep = defaultSeparator;
 
-    const now = _getYyyyMmDd();
-    return now.getFullYear().toString() + sep + formatMonth(now) + sep
-        + formatDay(now);
+  const now = _getYyyyMmDd();
+  return (
+    now.getFullYear().toString() + sep + formatMonth(now) + sep + formatDay(now)
+  );
 }

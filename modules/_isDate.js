@@ -1,5 +1,5 @@
 'use strict';
 
-export function _isDate (date) {
-    return date instanceof Date;
+export function _isDate(date) {
+  return date instanceof Date;
 }

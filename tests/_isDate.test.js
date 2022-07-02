@@ -11,11 +11,11 @@ const { expect } = chai;
    prefer-arrow-callback
 */
 suite('_isDate()', function () {
-    test('should be Date instance', function () {
-        expect(_isDate(new Date())).to.equal(true);
-    });
+  test('should be Date instance', function () {
+    expect(_isDate(new Date())).to.equal(true);
+  });
 
-    test('should not be Date instance', function () {
-        expect(_isDate('abc')).to.equal(false);
-    });
+  test('should not be Date instance', function () {
+    expect(_isDate('abc')).to.equal(false);
+  });
 });

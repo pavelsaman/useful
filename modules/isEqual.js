@@ -5,12 +5,12 @@ import { _isEqual } from './_isEqual.js';
 /**
  * Return true if given arrays are equal, e.i. have the same members in the
  * same order.
- * 
+ *
  * @param  {object} arr
  * @param  {object} arr1
  */
-export function isEqual (arr, arr1) {
-    if (_isEqual(arr, arr1, (e, e1) => e == e1)) return true;
+export function isEqual(arr, arr1) {
+  if (_isEqual(arr, arr1, (e, e1) => e == e1)) return true;
 
-    return false;
+  return false;
 }
