@@ -168,6 +168,17 @@
  */
 ```
 
+### merge()
+
+```js
+/**
+ * Merge two objects.
+ *
+ * @param  {object} obj
+ * @param  {object} obj1
+ */
+```
+
 ### min()
 
 ```js
