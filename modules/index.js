@@ -25,3 +25,4 @@ export { getEnvWithoutLang } from './getEnvWithoutLang.js';
 export { getLang } from './getLang.js';
 export { dateAsISO } from './dateAsISO.js';
 export { unix } from './unix.js';
+export { merge } from './merge.js';
