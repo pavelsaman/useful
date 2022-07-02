@@ -24,3 +24,4 @@ export { getEnv } from './getEnv.js';
 export { getEnvWithoutLang } from './getEnvWithoutLang.js';
 export { getLang } from './getLang.js';
 export { dateAsISO } from './dateAsISO.js';
+export { unix } from './unix.js';

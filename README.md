@@ -273,6 +273,15 @@
  */
 ```
 
+### unix()
+
+```js
+/**
+ * Return unit timestamp.
+ *
+ */
+```
+
 ### yyyyMmDd()
 
 ```js
@@ -282,4 +291,3 @@
  * @param  {string} separator Default '/'.
  */
 ```
-
