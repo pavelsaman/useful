@@ -63,6 +63,8 @@ jobs:
     name: Release to npmjs registry
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: npmjs
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v3
