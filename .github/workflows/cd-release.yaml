@@ -65,6 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: npmjs
+      url: https://www.npmjs.com/package/useful-library
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v3
