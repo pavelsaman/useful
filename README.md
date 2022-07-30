@@ -1,5 +1,9 @@
+# Useful-library
+
 [![Static analysis](https://github.com/pavelsaman/useful/actions/workflows/static-analysis.yaml/badge.svg?event=schedule)](https://github.com/pavelsaman/useful/actions/workflows/static-analysis.yaml)
 [![Run tests and publish](https://github.com/pavelsaman/useful/actions/workflows/cd-release.yaml/badge.svg)](https://github.com/pavelsaman/useful/actions/workflows/cd-release.yaml)
+
+## API methods
 
 ### containsOnly()
 
