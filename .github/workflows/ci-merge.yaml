@@ -1,0 +1,12 @@
+name: Merge to master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yaml
+    with:
+      node-version: 18
