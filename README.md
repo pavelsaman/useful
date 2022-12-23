@@ -1,7 +1,7 @@
 # Useful-library
 
 [![Static analysis](https://github.com/pavelsaman/useful/actions/workflows/static-analysis.yaml/badge.svg?event=schedule)](https://github.com/pavelsaman/useful/actions/workflows/static-analysis.yaml)
-[![Test](https://github.com/pavelsaman/useful/actions/workflows/test.yaml/badge.svg?event=push)](https://github.com/pavelsaman/useful/actions/workflows/test.yaml)
+[![Merge to master](https://github.com/pavelsaman/useful/actions/workflows/ci-merge.yaml/badge.svg?event=push)](https://github.com/pavelsaman/useful/actions/workflows/ci-merge.yaml)
 
 ## API methods
 
