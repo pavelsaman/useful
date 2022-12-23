@@ -12,8 +12,8 @@
     "test:debug": "mocha --grep @debug",
     "t": "npm run test",
     "doc": "./doc-parser.pl -f ./modules",
-    "format": "prettier --write **/*.js",
-    "format:check": "prettier --check **/*.js"
+    "format": "prettier --check **/*.js",
+    "format:fix": "prettier --write **/*.js"
   },
   "keywords": [
     "helpers",
