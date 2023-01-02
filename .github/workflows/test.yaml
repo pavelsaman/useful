@@ -82,3 +82,7 @@ jobs:
 
       - name: Test
         run: npm test
+
+      - uses: pavelsaman/send-mocha-test-results-to-nr@v1
+        with:
+          new-relic-license-key: ${{ secrets.NEWRELIC_LICENSE_KEY }}

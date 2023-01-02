@@ -1,4 +1,8 @@
 {
   "spec": "./tests/*.test.js",
-  "ui": "tdd"
+  "ui": "tdd",
+  "reporter": "json",
+  "reporterOptions": [
+    "output=./results.json"
+  ]
 }
